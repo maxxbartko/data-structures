@@ -1,11 +1,11 @@
 var Stack = function() {
-  var newStack = Object.create(Stack.stackMethods);
+  var newStack = Object.create(stackMethods);
   newStack.storage = {};
   newStack.index = -1;
   return newStack;
 };
 
-Stack.stackMethods = {
+var stackMethods = {
   push: function(val) {
     this.index++;
     this.storage[this.index] = val;
@@ -19,6 +19,6 @@ Stack.stackMethods = {
   },
 
   size: function() {
-	return this.index + 1;
+  	return this.index + 1;
   }
 };
